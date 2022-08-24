@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -50,10 +50,10 @@ const questions = [
     // Project Usage Information
     {
         type: 'input',
-        name: 'HowTo',
+        name: 'Usage',
         message: 'How do you use this application: (Required)',
-        validate: howtoInput => {
-            if (howtoInput) {
+        validate: UsageInput => {
+            if (UsageInput) {
                 return true;
             } else {
                 console.log('You need to provide information on how to use this Application!');
@@ -61,30 +61,30 @@ const questions = [
             }
         }
     },
-    // Project Contribution Guidlines
+    // Project Credits 
     {
         type: 'input',
-        name: 'contribution',
-        message: 'How Should one contribute to the project: (Required)',
-        validate: contributionInput => {
-            if (contributionInput) {
+        name: 'Credits',
+        message: 'collaborators on the project: (Required)',
+        validate: CreditsInput => {
+            if (CreditsInput) {
                 return true;
             } else {
-                console.log('You need to provide information on how to contribute to the project!');
+                console.log('You need to provide information on the collaborators of the project!');
                 return false;
             }
         }
     },
-    // Project Test Instructions 
+    // Project Features Instructions 
     {
         type: 'input',
-        name: 'testing',
+        name: 'features',
         message: 'How to test application: (Required)',
-        validate: testingInput => {
-            if (testingInput) {
+        validate: FeaturesInput => {
+            if (FeaturesInput) {
                 return true;
             } else {
-                console.log('You need to describe how to test this project!');
+                console.log('You need to describe the features of this project!');
                 return false;
             }
         }
@@ -142,7 +142,7 @@ function init() {
     inquirer.prompt(questions)
         .then(function (userInput) {
             console.log(userInput)
-            writeToFile("README.md", generateMarkdown(userInput));
+            writeToFile("DEMOREADME.md", generateMarkdown(userInput));
         });
 }
 
