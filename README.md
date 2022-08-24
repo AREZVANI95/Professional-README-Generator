@@ -13,10 +13,10 @@
 Application that will generate a professional README, based on user input.
 
 ## Static GIF:
-![Displaying-Code](assets/css/img/Quiz-in-progress.PNG)
+![Displaying-Code](Develop/img/Idle%20Code%20Github.gif)
 
 ## GIF in Action:
-![Code-Presentation](assets/css/img/Quiz-in-progress.PNG)
+![Code-Presentation](Develop/img/Code%20in%20action.gif)
 
 ## Installation:
 - Download the ZIP file or clone the repository
